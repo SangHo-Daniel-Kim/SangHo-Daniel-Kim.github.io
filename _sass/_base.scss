@@ -198,6 +198,34 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  .profile-image-flip {
+    perspective: 1000px;
+
+    figure {
+      margin: 0;
+    }
+  }
+
+  .profile-image-flip-inner {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: transform 600ms ease;
+  }
+
+  .profile-image-flip-front,
+  .profile-image-flip-back {
+    grid-area: 1 / 1;
+    backface-visibility: hidden;
+  }
+
+  .profile-image-flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .profile-image-flip:hover .profile-image-flip-inner {
+    transform: rotateY(180deg);
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
