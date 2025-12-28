@@ -14,7 +14,7 @@ profile:
   image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: True # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm SangHo, a junior majoring **Computer Science & Engineering**(CSE), **Artificial Intelligence** (AI), and **Political Science & International Relations**(PSIR) at Sunkyunkwan University (SKKU).
+Hi, I'm SangHo, a junior majoring **Computer Science & Engineering** (CSE), **Artificial Intelligence** (AI), and **Political Science & International Relations** (PSIR) at Sunkyunkwan University (SKKU).
 
 I am currently doing research at the University of Texas at Austin (UT Austin) as an exchange student advised by [Prof. Georgios Pavlakos](https://geopavlakos.github.io/) and co-advised by [Prof. Kristen Grauman](https://www.cs.utexas.edu/~grauman/).
 
