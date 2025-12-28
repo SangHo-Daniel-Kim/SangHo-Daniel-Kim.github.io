@@ -216,6 +216,7 @@ ul.task-list input[type="checkbox"] {
   .profile-image-flip-back {
     grid-area: 1 / 1;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .profile-image-flip-back {
