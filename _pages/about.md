@@ -27,14 +27,15 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm SangHo, a junior majoring **Computer Science & Engineering** (CSE), **Artificial Intelligence** (AI), and **Political Science & International Relations** (PSIR) at Sunkyunkwan University (SKKU).
+Hi, I'm Sang-Ho.
+I'm a junior exchange student at the University of Texas at Austin, Department of Computer Science, advised by [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
+Back at my home institution, I am pursuing three majors: **Computer Science & Engineering**, **Artificial Intelligence**, and **Political Science & International Relations** at Sungkyunkwan University, South Korea.
 
-I am currently doing research at the University of Texas at Austin (UT Austin) as an exchange student advised by [Prof. Georgios Pavlakos](https://geopavlakos.github.io/) and co-advised by [Prof. Kristen Grauman](https://www.cs.utexas.edu/~grauman/).
+**My research interests** lie in **interaction modeling** using 3D Computer Vision and Multimodal Machine Learning.
+I am particularly interested in topics closely connected to everyday experiences, such as human–human interaction and human–environment interaction.
 
-**My research Interests** are in **Social Interaction Modeling** with a broader focus in Artificial Social Intelligence (ASI) and Multimodal Machine Learning.
+Before coming to UT, I had the opportunity to work with [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) on Artificial Social Intelligence and with [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University [Code Lab](https://codelab.snu.ac.kr/).
 
-Before my time at UT, I had a wonderful time with [Prof. Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) studying Social Intelligence at SKKU during my sophomore year. Before that, I interned at Seoul National University [Code Lab](https://codelab.snu.ac.kr/), advised by [Prof. Hyojin Sung](https://codelab.snu.ac.kr/people) during my freshman year.
+I'm also the Founder of [**SungKyunKwan AI** (SKKAI)](https://www.linkedin.com/company/skkai-sungkyunkwan-ai/), officially supported by the College of Computing & Informatics and the Artificial Intelligence Research Institute at Sungkyunkwan University.
 
-I'm also the Founder of [SungKyunKwan AI (SKKAI)](https://www.linkedin.com/company/skkai-sungkyunkwan-ai/), officially supported by the College of Computing & Informatics and SungKyun Artificial Intelligence Research Institute.
-
-I'm also a ex-Staff Sergeant from R.O.K. Air Force Operations Command Joint Systems branch(Comms), where I worked with the United States 7th Air Force at Osan Air Base. My proposals there were recognized by the Chief of Command and Palantir.
+I completed my military service as a Staff Sergeant in the Republic of Korea **Air Force Operations Command** (Joint Systems Branch, Communications), where I worked with the United States 7th Air Force at Osan Air Base. My research proposals were recognized by the Chief of Command and Palantir Technologies.
