@@ -28,13 +28,15 @@ latest_posts:
 ---
 
 Hi, I'm Sang-Ho.
-I'm a junior exchange student at the University of Texas at Austin, Department of Computer Science, advised by [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
-Back at my home institution, I am pursuing three majors: **Computer Science & Engineering**, **Artificial Intelligence**, and **Political Science & International Relations** at Sungkyunkwan University, South Korea.
 
-**My research interests** lie in **interaction modeling** using 3D Computer Vision and Multimodal Machine Learning.
+I'm a junior at the University of Texas at Austin, [Department of Computer Science](https://www.cs.utexas.edu/), advised by [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
+
+**My research interests** lie in **interaction modeling** using **3D Computer Vision** and **Multimodal Machine Learning**.
 I am particularly interested in topics closely connected to everyday experiences, such as human–human interaction and human–environment interaction.
 
-Before coming to UT, I had the opportunity to work with [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) on Artificial Social Intelligence and with [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University [Code Lab](https://codelab.snu.ac.kr/).
+Before coming to UT, I have a unique background of three majors: Computer Science & Engineering, Artificial Intelligence, and Political Science & International Relations at Sungkyunkwan University, South Korea.
+
+In the past, I had the opportunity to work with [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) on Artificial Social Intelligence and with [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University [Code Lab](https://codelab.snu.ac.kr/).
 
 I'm also the Founder of [**SungKyunKwan AI** (SKKAI)](https://www.linkedin.com/company/skkai-sungkyunkwan-ai/), officially supported by the College of Computing & Informatics and the Artificial Intelligence Research Institute at Sungkyunkwan University.
 
