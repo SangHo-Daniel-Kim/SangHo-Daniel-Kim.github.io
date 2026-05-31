@@ -9,7 +9,7 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 12056F88-4568-4978-AF46-1757054ABBD3.JPG
   hover_image: prof_pic_1.JPG
   image_circular: false # crops the image to make it circular
 
