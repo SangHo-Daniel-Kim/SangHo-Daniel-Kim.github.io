@@ -2,19 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: >
-  <a href='#'>Sungkyunkwan University</a>, Seoul, South Korea<br>
-  <a href='#'>The University of Texas at Austin</a>, Austin, TX, USA
+subtitle: ""
 
 
 profile:
   align: right
-  image: 12056F88-4568-4978-AF46-1757054ABBD3.JPG
-  hover_image: prof_pic_1.JPG
+  image: IMG_9681.jpg
+  hover_image: 12056F88-4568-4978-AF46-1757054ABBD3.JPG
+  hover_image2: KakaoTalk_Photo_2026-06-02-15-55-12.jpeg
   image_circular: false # crops the image to make it circular
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: True # includes social icons at the bottom of the page
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: false # social icons shown below profile card instead
 
 announcements:
   enabled: true # includes a list of news items
@@ -27,12 +26,16 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi y'all, I'm Sang-Ho.
+Hi y'all! I'm **SangHo**.
 
-I'm a senior at the University of Texas at Austin, [Department of Computer Science](https://www.cs.utexas.edu/), advised by [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
-Before coming to UT, I use to study Computer Science, Artificial Intelligence, and International Relations (Phew!) at Sungkyunkwan University.
-During my time in South Korea, I had a wonderful year with [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) and [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University.
-My research interests lie in Computer Vision and Multimodal Learning. I am particularly interested in topics that are closely connected to our everyday experiences, such as modeling interactions.
+I am a visiting student at [UT Austin CS](https://www.cs.utexas.edu/),
+advised by Professors [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
 
-Other than research, I enjoy participating in public service. I worked as an AI policy advisor for the Ministry of Science and ICT and was one of the 15 South Korean delegates selected by the United States Department of State.
-I also served for two years in the Air Force Operations Command, Information and Communications Branch.
+My research interests lie in **Computer Vision** and **Multimodal Learning**, with a focus on modeling everyday human activities.
+Especially, I use modern 3D/4D reconstruction methods to model and analyze interactions to better understand human behaviors.
+
+I am a senior in my undergraduate studies in Computer Science, Artificial Intelligence, and International Relations (3 majors!) at Sungkyunkwan University, and spent a wonderful research year with [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) and [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University.
+
+Outside research, I love to serve for the public.
+
+I worked as an AI policy advisor for South Korea's Ministry of Science and ICT, participated as one of 15 Korean youth delegates by the U.S. Department of State, and completed two years of military service in the Air Force Operations Command alongside the [U.S. 7th Air Force](https://www.pacaf.af.mil/7th-Air-Force/).

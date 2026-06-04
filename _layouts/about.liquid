@@ -5,11 +5,15 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
+        <span class="name-text"><span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}</span>
       {% else %}
         {{ site.title }}
       {% endif %}
+      <span class="header-social-icons">
+        <a href="https://scholar.google.com/citations?user=jWO1NB8AAAAJ" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="mailto:sanghokim@utexas.edu" title="email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/danieliscoding" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </span>
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
@@ -31,22 +35,61 @@ layout: default
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {% if page.profile.hover_image %}
-            <div class="profile-image-flip" aria-label="Profile image">
-              <div class="profile-image-flip-inner">
-                <div class="profile-image-flip-front">
+            {% if page.profile.hover_image2 %}
+              {% assign profile_hover_image2_path = page.profile.hover_image2 | prepend: 'assets/img/' %}
+            {% endif %}
+            <div class="profile-card-stack" aria-label="Profile image">
+              {% if page.profile.hover_image2 %}
+                <div class="profile-card" data-pos="2">
                   {%
-                    include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+                    include figure.liquid loading="eager" path=profile_hover_image2_path class=profile_image_class sizes=sizes alt=page.profile.hover_image2
                     cache_bust=true
                   %}
                 </div>
-                <div class="profile-image-flip-back">
-                  {%
-                    include figure.liquid loading="eager" path=profile_hover_image_path class=profile_image_class sizes=sizes alt=page.profile.hover_image
-                    cache_bust=true
-                  %}
-                </div>
+              {% endif %}
+              <div class="profile-card" data-pos="{% if page.profile.hover_image2 %}1{% else %}1{% endif %}">
+                {%
+                  include figure.liquid loading="eager" path=profile_hover_image_path class=profile_image_class sizes=sizes alt=page.profile.hover_image
+                  cache_bust=true
+                %}
+              </div>
+              <div class="profile-card" data-pos="0">
+                {%
+                  include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+                  cache_bust=true
+                %}
               </div>
             </div>
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var stack = document.querySelector('.profile-card-stack');
+                if (!stack) return;
+                var cards = Array.from(stack.querySelectorAll('.profile-card'));
+                var n = cards.length;
+
+                function bringToFront(clickedPos) {
+                  if (stack.dataset.animating === 'true') return;
+                  stack.dataset.animating = 'true';
+                  var clickedCard = cards.find(function(c) { return c.dataset.pos === String(clickedPos); });
+                  clickedCard.style.zIndex = '10';
+                  cards.forEach(function(c) {
+                    var pos = parseInt(c.dataset.pos);
+                    c.dataset.pos = c === clickedCard ? '0' : String((pos + (n - clickedPos)) % n);
+                  });
+                  setTimeout(function() {
+                    clickedCard.style.zIndex = '';
+                    stack.dataset.animating = 'false';
+                  }, 680);
+                }
+
+                stack.addEventListener('click', function(e) {
+                  var clicked = e.target.closest('.profile-card');
+                  if (!clicked) return;
+                  var pos = parseInt(clicked.dataset.pos);
+                  if (pos > 0) bringToFront(pos);
+                });
+              });
+            </script>
           {% else %}
             {%
               include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
@@ -62,29 +105,22 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2 class="about-section-heading">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      <h2 class="about-section-heading">
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
 
     <!-- Social -->
     {% if page.social %}
