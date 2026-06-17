@@ -6,4 +6,4 @@ related_posts: false
 category: academic
 ---
 
-I joined [Pixel Lab](https://sites.google.com/view/sangmin-lee/home) (Prof. Sangmin Lee, SKKU) as an undergraduate researcher, working on multimodal cognition.
+I joined [Pixel Lab](https://sites.google.com/view/sangmin-lee/home) at SKKU advised by [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home) as an undergraduate researcher, working on artificial social intelligence.
