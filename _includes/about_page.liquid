@@ -1,0 +1,59 @@
+{% assign about_page = site.data.about_page %}
+
+<div class="about-page collection-page">
+  <div class="collection-header">
+    <h1>About</h1>
+    <h2>inside the academy, and beyond it</h2>
+    {% if about_page.updated %}
+      <p class="collection-updated">Updated {{ about_page.updated | date: '%b %d, %Y' }}</p>
+    {% endif %}
+    {% if about_page.intro_label or about_page.intro %}
+      <p class="collection-intro">
+        {% if about_page.intro_label %}
+          <span class="collection-intro-label">{{ about_page.intro_label }}</span>
+        {% endif %}
+        {% if about_page.intro %}
+          <span class="collection-intro-text">{{ about_page.intro }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
+
+  {% for section in about_page.sections %}
+    <section class="collection-section about-section" id="{{ section.id }}">
+      <div class="collection-section-heading">
+        <h3>{{ section.title }}</h3>
+        {% if section.subtitle %}
+          <span class="collection-section-subtitle">{{ section.subtitle }}</span>
+        {% endif %}
+      </div>
+
+      <div class="about-story-stream">
+        {% if about_page.story_rows.size > 0 %}
+          {% for row in about_page.story_rows %}
+            {% assign image_side = row.image_side | default: 'left' %}
+            <article class="about-story-row about-story-row--image-{{ image_side }}">
+              {% if row.image %}
+                <figure class="about-story-media">
+                  <img
+                    src="{{ row.image | relative_url }}"
+                    alt="{{ row.image_alt | default: '' }}"
+                    loading="lazy"
+                  />
+                  {% if row.image_caption %}
+                    <figcaption>{{ row.image_caption }}</figcaption>
+                  {% endif %}
+                </figure>
+              {% endif %}
+              {% if row.text %}
+                <div class="about-story-prose">{{ row.text | markdownify }}</div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        {% else %}
+          <p class="about-story-placeholder">Story entries with photos will appear here soon.</p>
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

@@ -448,6 +448,8 @@ ul.task-list input[type="checkbox"] {
 // ---------------------------------------------------------------------------
 .collection-page {
   max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
 
   .collection-header {
     margin-bottom: 2.5rem;
@@ -782,16 +784,16 @@ ul.task-list input[type="checkbox"] {
 }
 
 // ---------------------------------------------------------------------------
-// Life page — prose + photo story stream
+// About page — prose + photo story stream
 // ---------------------------------------------------------------------------
-.life-page {
-  .life-story-stream {
+.about-page {
+  .about-story-stream {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
   }
 
-  .life-story-placeholder {
+  .about-story-placeholder {
     margin: 0;
     padding: 1.25rem 1.1rem;
     border: 1px dashed var(--global-divider-color);
@@ -803,7 +805,7 @@ ul.task-list input[type="checkbox"] {
     background-color: var(--global-card-bg-color);
   }
 
-  .life-story-row {
+  .about-story-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.1rem;
@@ -817,7 +819,7 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
-  .life-story-media {
+  .about-story-media {
     margin: 0;
     overflow: hidden;
     border-radius: 6px;
@@ -841,7 +843,7 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
-  .life-story-prose {
+  .about-story-prose {
     font-size: 0.95rem;
     line-height: 1.75;
     color: var(--global-text-color);
@@ -860,35 +862,35 @@ ul.task-list input[type="checkbox"] {
   }
 
   @media (min-width: 768px) {
-    .life-story-row {
+    .about-story-row {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 1.5rem;
       padding: 1.25rem 0;
     }
 
-    .life-story-row--image-right {
-      .life-story-media {
+    .about-story-row--image-right {
+      .about-story-media {
         order: 2;
       }
 
-      .life-story-prose {
+      .about-story-prose {
         order: 1;
       }
     }
 
-    .life-story-row--image-left {
-      .life-story-media {
+    .about-story-row--image-left {
+      .about-story-media {
         order: 1;
       }
 
-      .life-story-prose {
+      .about-story-prose {
         order: 2;
       }
     }
 
     // Text-only or image-only rows span full width gracefully.
-    .life-story-row:not(:has(.life-story-media)),
-    .life-story-row:not(:has(.life-story-prose)) {
+    .about-story-row:not(:has(.about-story-media)),
+    .about-story-row:not(:has(.about-story-prose)) {
       grid-template-columns: 1fr;
     }
   }

@@ -1,11 +1,11 @@
 updated: 2026-08-07
 
-intro_label: Life
-intro: Stories, thoughts, and things I care about beyond research.
+intro_label: About
+intro: A look at my path through research, service, and everything in between.
 
 sections:
-  - id: stories
-    title: Stories
+  - id: journey
+    title: Journey
     subtitle: words & moments
 
 # Alternating prose + photo rows. Set image_side to left or right per row.

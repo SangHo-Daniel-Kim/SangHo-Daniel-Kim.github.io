@@ -1,11 +1,11 @@
 ---
 layout: default
-permalink: /life/
-title: life
+permalink: /about/
+title: about
 nav: true
 nav_order: 1
 ---
 
 <div class="post">
-  {% include life_page.liquid %}
+  {% include about_page.liquid %}
 </div>
