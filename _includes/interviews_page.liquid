@@ -1,0 +1,57 @@
+{% assign interviews = site.data.interviews %}
+
+<div class="interviews-page collection-page">
+  <div class="collection-header">
+    <h1>Interviews</h1>
+    <h2>press coverage &amp; conversations</h2>
+    <p class="collection-updated">Updated {{ interviews.updated | date: '%b %d, %Y' }}</p>
+    {% if interviews.intro %}
+      <p class="collection-intro">{{ interviews.intro }}</p>
+    {% endif %}
+  </div>
+
+  {% for section in interviews.sections %}
+    <section class="collection-section interviews-section" id="{{ section.id }}">
+      <div class="collection-section-heading">
+        <h3>{{ section.title }}</h3>
+        {% if section.subtitle %}
+          <span class="collection-section-subtitle">{{ section.subtitle }}</span>
+        {% endif %}
+      </div>
+
+      <ul class="interviews-list">
+        {% for item in section.items %}
+          <li class="interview-card{% if item.image %} interview-card--with-thumb{% endif %}">
+            {% if item.image %}
+              <a class="interview-thumb" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy" />
+              </a>
+            {% endif %}
+            <div class="interview-card-body">
+              <div class="interview-card-meta">
+                <span class="interview-type interview-type--{{ item.type }}">{{ item.type }}</span>
+                <span class="interview-date">{{ item.date | date: '%b %d, %Y' }}</span>
+                <span class="interview-source">{{ item.source }}</span>
+              </div>
+              <h4 class="interview-title">
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+              </h4>
+              {% if item.title_original %}
+                <p class="interview-title-original">{{ item.title_original }}</p>
+              {% endif %}
+              {% if item.description %}
+                <p class="interview-desc">{{ item.description }}</p>
+              {% endif %}
+              {% if item.note %}
+                <p class="interview-note">{{ item.note }}</p>
+              {% endif %}
+              <a class="interview-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                Read article <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

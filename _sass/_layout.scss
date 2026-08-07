@@ -31,6 +31,41 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
+// Override Bootstrap 4 responsive container caps (xl defaults to 1140px).
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: $max-content-width;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: $max-content-width;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: $max-content-width;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: $max-content-width;
+  }
+}
+
 // Profile
 .profile {
   img {

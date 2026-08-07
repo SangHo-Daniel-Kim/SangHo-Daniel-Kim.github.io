@@ -1,0 +1,80 @@
+updated: 2026-02-24
+
+intro: "Press coverage and interviews about my work at SKKU, Government, and beyond.<br>Most linked articles are in Korean."
+
+sections:
+  - id: press
+    title: Press Coverage
+    subtitle: official announcements
+    items:
+      - date: 2026-02-13
+        source: SKKU AAI
+        title: "CSE/GCO Student SangHo Kim Wins the 2025 Korea National Talent Award"
+        title_original: "글로벌융합학부 김상호 학생, 2025 대한민국 인재상 수상"
+        description: Department feature on receiving the 2025 Korea National Talent Award.
+        url: https://sco.skku.edu/sco/community/news.do?mode=view&articleNo=213073&article.offset=0&articleLimit=10
+        image: /assets/img/interviews/aai_talent_award.jpg
+        type: article
+        note: Recognized for bridging technical expertise with social impact.
+
+      - date: 2025-12-30
+        source: SKKU
+        title: "SKKU Produces Four Recipients of the 2025 Korea National Talent Award"
+        title_original: "성균관대, 2025 대한민국 인재상에 4명 수상자 배출"
+        description: University announcement on four SKKU recipients of the 2025 Korea National Talent Award.
+        url: https://www.skku.edu/skku/campus/skk_comm/news.do?mode=view&articleNo=133696&article.offset=0&articleLimit=10
+        image: /assets/img/interviews/skku_talent_award.jpg
+        type: article
+        note: Made my university's front-page headline!
+
+      - date: 2025-07-15
+        source: U.S. Embassy Tokyo
+        title: "Young Trilateral Leaders Summit in Osaka (U.S.–Japan–Korea)"
+        description: U.S. Embassy readout on the Young Trilateral Leaders Summit convening next-generation U.S.–Japan–Korea leaders in Osaka.
+        url: https://jp.usembassy.gov/young-trilateral-leaders-summit-in-osaka-us-japan-korea/
+        image: /assets/img/interviews/ytl_osaka.jpg
+        type: article
+        note: Attended as the only STEM representative in the 15-member Korean delegation.
+
+      - date: 2024-11-01
+        source: U.S. Embassy Seoul
+        title: "U.S. Department of State TechCamp 2024 — Shaping the Future of Responsible AI"
+        description: U.S. Department of State TechCamp hosted by the U.S. Embassy in Seoul.
+        url: https://kr.usembassy.gov/2024techcamp/
+        image: /assets/img/interviews/techcamp_2024.jpg
+        type: article
+        note: Developed an ethical AI filter using Low-Rank Adaptation (LoRA) for Korean industrial LLMs.
+
+  - id: interviews
+    title: Interviews & Features
+    subtitle: conversations and student stories
+    items:
+      - date: 2025-10-01
+        source: SKKU Webzine
+        title: "“Three Students, Three Colors: Designing the Future with SW and AI” — Junwoo Park, Dongwan Kim, SangHo Kim"
+        title_original: "‘3인 3색, SW와 AI로 미래를 설계하다’ — 박준우, 김동완, 김상호 학우"
+        description: Student Success Story featuring three students designing the future through software and AI.
+        url: https://www.skku.edu/skku/research/industry/StudentChallenge_view.do?mode=view&articleNo=130468&article.offset=0&articleLimit=9
+        image: /assets/img/interviews/three_students.jpg
+        type: interview
+        note: Selected as one of three SKKU CSE Rising Stars!
+
+      - date: 2025-08-13
+        source: CEO Journal
+        title: "“Diplomacy and Technology Are, in the End, Connections for People”"
+        title_original: "“외교와 기술, 결국은 사람을 위한 연결입니다 — [세상 읽기] 김상호 과학기술정보통신부 AI국 청년 자문위원”"
+        description: Interview on bridging technology and diplomacy across welfare, security, and international cooperation.
+        url: https://www.ceojhn.com/news/articleView.html?idxno=8883
+        image: /assets/img/interviews/ceojournal.jpg
+        type: interview
+        note: An interview on my advisory work with the AI Division of Korea's Ministry of Science and ICT.
+
+      - date: 2025-08-07
+        source: SKKU CSE
+        title: "Young Trilateral Leaders (YTL) Osaka Summit — Next-Generation U.S.–Japan–Korea Leaders Gather"
+        title_original: "Young Trilateral Leaders (YTL) Osaka Summit — 한·미·일 차세대 리더들 한자리에"
+        description: Student report on participating in the Young Trilateral Leaders Osaka Summit for next-generation U.S.–Japan–Korea leaders.
+        url: https://skb.skku.edu/swuniv/Data.do?mode=view&articleNo=204421&article.offset=0&articleLimit=12
+        image: /assets/img/interviews/ytl_skku_cse.jpg
+        type: interview
+        note: A personal reflection I wrote on my experience at the 2025 YTL Summit.

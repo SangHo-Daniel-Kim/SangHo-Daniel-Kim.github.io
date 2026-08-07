@@ -185,7 +185,7 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical pub-meta">
-      <span class="venue-year" style="color: #bf5700;">{{ periodical | strip }}</span>
+      <span class="venue-year">{{ periodical | strip }}</span>
       {% if entry.html %}
         {% if entry.html contains '://' %}
           <a href="{{ entry.html }}" class="pub-link">[paper]</a>

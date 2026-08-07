@@ -113,12 +113,33 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Projects -->
+    {% if page.projects_home %}
+      <h2 class="about-section-heading">
+        <a href="{{ '/projects/' | relative_url }}" style="color: inherit">Projects</a>
+        <span class="coming-soon">(Coming Soon!)</span>
+      </h2>
+      {% include projects_home.liquid %}
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2 class="about-section-heading">
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Scholarships & Honors -->
+    {% if page.honors_home %}
+      <h2 class="about-section-heading">Scholarships &amp; Honors</h2>
+      {% include honors_home.liquid %}
+    {% endif %}
+
+    <!-- Public Service -->
+    {% if page.public_service_home %}
+      <h2 class="about-section-heading">Public Service</h2>
+      {% include public_service_home.liquid %}
     {% endif %}
 
 

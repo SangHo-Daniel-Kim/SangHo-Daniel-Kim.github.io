@@ -1,18 +1,21 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: ""
 
 
 profile:
   align: right
-  image: IMG_7244.JPG
-  hover_image: 12056F88-4568-4978-AF46-1757054ABBD3.JPG
-  hover_image2: KakaoTalk_Photo_2026-06-02-15-55-12.jpeg
+  image: front_page/flowers.jpg
+  hover_image: front_page/profile.jpg
+  hover_image2: front_page/robots.jpg
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+projects_home: true # includes a Projects section below Publications
+honors_home: true # includes a Scholarships & Honors section below News
+public_service_home: true # includes a Public Service section below Honors
 social: false # social icons shown below profile card instead
 
 announcements:
@@ -28,14 +31,16 @@ latest_posts:
 
 Hi y'all! I'm **SangHo**.
 
-I am a visiting student at [UT Austin CS](https://www.cs.utexas.edu/),
-advised by Professors [Kristen Grauman](https://www.cs.utexas.edu/~grauman/) and [Georgios Pavlakos](https://geopavlakos.github.io/).
+I am a visiting student at [the University of Texas at Austin](https://www.cs.utexas.edu/), advised by Professors [Georgios Pavlakos](https://geopavlakos.github.io/) and [Kristen Grauman](https://www.cs.utexas.edu/~grauman/).
 
-My research interests lie in **Computer Vision** and **Multimodal Learning**, with a focus on modeling everyday human activities.
-In particular, I use modern 3D/4D reconstruction methods to model and analyze interactions to better understand human behaviors.
+My research question is: **How can social intelligence understand beyond the projected world and interact with individuals/environment in physical space, as humans do?**
 
-I am a senior in my undergraduate studies in Computer Science, Artificial Intelligence, and International Relations (3 majors!) at Sungkyunkwan University, and spent a wonderful research year with Professors [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home), [Jaepil Heo](https://sites.google.com/site/jaepilheo) at Sungkyunkwan University, and [Hyojin Sung](https://codelab.snu.ac.kr/people) at Seoul National University.
+Thus, my research interests lie in (1) Computer Vision and (2) Multimodal Learning, with a focus on modeling everyday human activities.
+In particular, I use modern 3D/4D approaches to model and analyze interactions to better understand human behaviors.
 
-Outside research, I love to serve the public.
+I am currently a senior undergraduate in Computer Science, Artificial Intelligence, and International Relations at [Sungkyunkwan University](https://www.skku.edu/eng/).
+I am thankful to have worked with Professors [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home), [Jaepil Heo](https://sites.google.com/site/jaepilheo), and [Hyojin Sung](https://codelab.snu.ac.kr/people).
 
-I worked as an AI policy advisor for South Korea's [Ministry of Science and ICT](https://www.msit.go.kr/eng/index.do), participated as one of 15 Korean youth delegates by the U.S. Department of State, and completed two years of military service in the Air Force Operations Command alongside the [U.S. 7th Air Force](https://www.pacaf.af.mil/7th-Air-Force/).
+Outside research, I enjoy film-making, listening to the radio, and excavating fancy new coffee shops. I also try to do volunteering and public service as much as possible, including governmental roles in policymaking and 300+ hours of volunteering!
+
+You can find some of my interviews sharing personal thoughts [here](/interviews/) *(in Korean)*.

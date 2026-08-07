@@ -320,8 +320,578 @@ ul.task-list input[type="checkbox"] {
 }
 
 .about-section-heading {
-  font-weight: 700;
-  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 2.25rem;
+
+  // Lighter, non-bold qualifier next to a section title, e.g. "(Coming Soon!)"
+  .coming-soon {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: var(--global-text-color-light);
+  }
+}
+
+.about-subsection-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1.25rem 0 0.35rem;
+  color: var(--global-text-color-light);
+}
+
+// Bulleted lists under About sections (Honors, Public Service, ...)
+.about-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+
+    &::marker {
+      color: var(--global-theme-color);
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Concise "Name — key detail" highlight bullets
+.highlight-list {
+  li {
+    margin-bottom: 0.7rem; // breathing room between items
+  }
+
+  .hl-name {
+    font-weight: 600;
+  }
+
+  .hl-desc {
+    color: var(--global-text-color-light);
+
+    // gap + subtle separator before the key detail
+    &::before {
+      content: "\00b7";
+      margin: 0 0.5rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+.highlight-list-stacked {
+  li {
+    margin-bottom: 0.85rem;
+  }
+
+  .hl-desc {
+    display: block;
+    padding-left: 1rem;
+    margin-top: 0.1rem;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+// Projects teaser on the home page
+.home-projects {
+  .project-item {
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--global-theme-color);
+    margin-bottom: 1.15rem;
+  }
+
+  .project-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .project-authors {
+    margin-top: 0.15rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+
+    strong {
+      color: var(--global-text-color);
+    }
+  }
+
+  .project-rq {
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.45;
+  }
+
+  .rq-label {
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Collection pages — shared header/sections (Interviews, Publications, …)
+// ---------------------------------------------------------------------------
+.collection-page {
+  max-width: 52rem;
+
+  .collection-header {
+    margin-bottom: 2.5rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: lowercase;
+      letter-spacing: 0.02em;
+      color: var(--global-theme-color);
+      margin-bottom: 0.6rem;
+    }
+
+    .collection-updated {
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .collection-intro {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--global-text-color-light);
+      margin: 0 auto;
+      max-width: 40rem;
+      text-align: center;
+    }
+
+    .collection-intro-label {
+      display: block;
+      color: var(--global-text-color);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .collection-intro-text {
+      display: block;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .collection-section {
+    margin-bottom: 2.75rem;
+  }
+
+  .collection-section-heading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .collection-section-subtitle {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Interviews page — press coverage & conversations
+// ---------------------------------------------------------------------------
+.interviews-page {
+  .interviews-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+}
+
+.interview-card {
+  position: relative;
+  padding: 1rem 1.1rem 1rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 6px;
+  background-color: var(--global-card-bg-color);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+    .interview-title a {
+      color: var(--global-theme-color);
+    }
+
+    .interview-link {
+      opacity: 1;
+    }
+
+    .interview-thumb img {
+      transform: scale(1.04);
+    }
+  }
+
+  // Cards with a thumbnail: photo on the left, content on the right.
+  // Stretch so the thumbnail matches the card's full vertical height.
+  &.interview-card--with-thumb {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  // Thumbnail stretches to the card height. Any pasted image auto-fits
+  // (no distortion): object-fit keeps the aspect ratio and fills the box,
+  // cropping overflow.
+  .interview-thumb {
+    flex: 0 0 auto;
+    align-self: stretch;
+    width: 132px;
+    min-height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: var(--global-divider-color);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+  }
+
+  .interview-card-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  @media (max-width: 576px) {
+    &.interview-card--with-thumb {
+      flex-direction: column;
+    }
+
+    .interview-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  .interview-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+  }
+
+  .interview-type {
+    display: inline-block;
+    padding: 0.08rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &.interview-type--article {
+      color: var(--global-theme-color);
+      background-color: rgba(191, 87, 0, 0.1);
+    }
+
+    &.interview-type--interview {
+      color: var(--global-text-color);
+      background-color: var(--global-divider-color);
+    }
+  }
+
+  .interview-source {
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  .interview-date {
+    &::after {
+      content: "·";
+      margin-left: 0.6rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .interview-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 0.3rem;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+  }
+
+  .interview-title-original {
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+    opacity: 0.75;
+    margin: -0.1rem 0 0.35rem;
+  }
+
+  .interview-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--global-text-color-light);
+    margin: 0;
+  }
+
+  .interview-note {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--global-text-color-light);
+    margin: 0.5rem 0 0;
+    padding: 0.4rem 0.65rem;
+    border-radius: 4px;
+    background-color: var(--global-code-bg-color);
+    border-left: 2px solid var(--global-text-color-light);
+  }
+
+  .interview-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--global-theme-color);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+
+    i {
+      font-size: 0.72rem;
+      margin-left: 0.15rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Publications page — page shell aligned with Interviews
+// ---------------------------------------------------------------------------
+.publications-page {
+  .publications-toolbar {
+    margin-bottom: 1.25rem;
+
+    p {
+      margin: 0;
+    }
+
+    .bibsearch-form-input {
+      max-width: 100%;
+      margin: 0;
+      color: var(--global-text-color);
+      background-color: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+
+      &:focus {
+        border-color: var(--global-theme-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(191, 87, 0, 0.12);
+      }
+    }
+  }
+
+  .publications-list .publications {
+    margin-top: 0;
+    font-size: 1rem;
+
+    h1 {
+      display: none;
+    }
+
+    h2.bibliography {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.6rem;
+      margin-top: 1.75rem;
+      margin-bottom: 1rem;
+      padding-top: 0;
+      padding-bottom: 0.35rem;
+      border-top: none;
+      border-bottom: 1px dashed var(--global-divider-color);
+      text-align: left;
+      color: var(--global-text-color);
+      font-size: 1rem;
+      font-weight: 600;
+
+      span {
+        font-size: 1rem;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    ol.bibliography {
+      display: grid;
+      gap: 0.25rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Life page — prose + photo story stream
+// ---------------------------------------------------------------------------
+.life-page {
+  .life-story-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .life-story-placeholder {
+    margin: 0;
+    padding: 1.25rem 1.1rem;
+    border: 1px dashed var(--global-divider-color);
+    border-radius: 6px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--global-text-color-light);
+    text-align: center;
+    background-color: var(--global-card-bg-color);
+  }
+
+  .life-story-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .life-story-media {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid var(--global-divider-color);
+    background-color: var(--global-card-bg-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding: 0.45rem 0.65rem;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--global-text-color-light);
+      border-top: 1px solid var(--global-divider-color);
+    }
+  }
+
+  .life-story-prose {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--global-text-color);
+
+    p {
+      margin: 0 0 0.85rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: var(--global-theme-color);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .life-story-row {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+    }
+
+    .life-story-row--image-right {
+      .life-story-media {
+        order: 2;
+      }
+
+      .life-story-prose {
+        order: 1;
+      }
+    }
+
+    .life-story-row--image-left {
+      .life-story-media {
+        order: 1;
+      }
+
+      .life-story-prose {
+        order: 2;
+      }
+    }
+
+    // Text-only or image-only rows span full width gracefully.
+    .life-story-row:not(:has(.life-story-media)),
+    .life-story-row:not(:has(.life-story-prose)) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .clearfix + .about-section-heading,
@@ -827,6 +1397,7 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+  font-size: 1rem; // match the intro/body text size
 
   h1 {
     color: var(--global-theme-color);
@@ -893,8 +1464,9 @@ footer.sticky-bottom {
       }
 
       .venue-year,
-      .venue-year em {
-        color: #bf5700 !important;
+      .venue-year em,
+      .venue-year span {
+        color: var(--global-text-color) !important;
         font-style: normal;
       }
 
@@ -1055,6 +1627,57 @@ footer.sticky-bottom {
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
+  }
+}
+
+// News
+
+.news {
+  font-size: 0.85rem;
+
+  .news-section-title {
+    font-size: 1rem;
+  }
+
+  table {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Projects on the home page: normal-size text, smaller thumbnails
+.projects-home {
+  font-size: 1rem; // title, authors, etc. at normal reading size
+
+  li > .row {
+    > .abbr {
+      flex: 0 0 22%;
+      max-width: 22%;
+    }
+
+    > div:not(.abbr) {
+      flex: 0 0 78%;
+      max-width: 78%;
+    }
+  }
+
+  .preview-wrapper,
+  .preview {
+    min-height: 40px;
+  }
+}
+
+// News on the home page: smaller, no scroll
+.news-home {
+  font-size: 0.75rem;
+
+  table {
+    margin-bottom: 0;
+  }
+
+  th,
+  td {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
   }
 }
 

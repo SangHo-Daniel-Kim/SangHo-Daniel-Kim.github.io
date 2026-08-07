@@ -1,6 +1,29 @@
-<div class="news">
+<div class="news{% if include.limit %} news-home{% endif %}">
   {% if site.news != blank %}
-    {% assign all_news = site.news | reverse %}
+    {% assign all_news = site.news | sort: 'date' | reverse %}
+
+    {% if include.limit %}
+      <!-- Home page: selected items only, no scroll -->
+      {% assign home_news = all_news | where: "home", true %}
+      {% if home_news.size > 0 %}
+        <table class="table table-sm table-borderless">
+          {% for item in home_news %}
+            <tr>
+              <th scope="row" style="width: 22%; white-space: nowrap;">{{ item.date | date: '%b %d, %Y' }}</th>
+              <td>
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>No news so far...</p>
+      {% endif %}
+    {% else %}
     {% assign academic_news = all_news | where: "category", "academic" %}
     {% assign extra_news = all_news | where: "category", "extracurricular" %}
 
@@ -44,6 +67,7 @@
           {% endfor %}
         </table>
       </div>
+    {% endif %}
     {% endif %}
 
   {% else %}
