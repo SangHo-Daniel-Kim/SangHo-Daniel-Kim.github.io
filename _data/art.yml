@@ -1,0 +1,21 @@
+updated: 2026-08-07
+
+intro_label: Art
+intro: Creative works, visual experiments, and things I make outside research.
+
+sections:
+  - id: gallery
+    title: Gallery
+    subtitle: selected works
+    items: []
+
+  # Example item — copy and edit to add entries:
+  # - date: 2026-01-01
+  #   source: Medium
+  #   title: "Piece Title"
+  #   title_original: ""
+  #   description: Short description of the work.
+  #   url: https://example.com
+  #   image: /assets/img/art/example.jpg
+  #   type: art
+  #   note: Optional note.

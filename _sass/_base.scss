@@ -640,6 +640,11 @@ ul.task-list input[type="checkbox"] {
       color: var(--global-text-color);
       background-color: var(--global-divider-color);
     }
+
+    &.interview-type--art {
+      color: var(--global-theme-color);
+      background-color: rgba(191, 87, 0, 0.1);
+    }
   }
 
   .interview-source {
@@ -784,6 +789,23 @@ ul.task-list input[type="checkbox"] {
 }
 
 // ---------------------------------------------------------------------------
+// Art page — reuses interview card layout
+// ---------------------------------------------------------------------------
+.art-page {
+  .art-placeholder {
+    margin: 0;
+    padding: +1.25rem 1.1rem;
+    border: 1px dashed var(--global-divider-color);
+    border-radius: 6px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--global-text-color-light);
+    text-align: center;
+    background-color: var(--global-card-bg-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // About page — prose + photo story stream
 // ---------------------------------------------------------------------------
 .about-page {
@@ -794,11 +816,12 @@ ul.task-list input[type="checkbox"] {
   }
 
   .about-story-placeholder {
-    margin: 0;
-    padding: 1.25rem 1.1rem;
+    margin: 2rem auto 0;
+    padding: 2.5rem 1.25rem;
     border: 1px dashed var(--global-divider-color);
     border-radius: 6px;
-    font-size: 0.92rem;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.6;
     color: var(--global-text-color-light);
     text-align: center;

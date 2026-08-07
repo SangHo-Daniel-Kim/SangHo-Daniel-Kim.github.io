@@ -1,0 +1,78 @@
+{% assign art = site.data.art %}
+
+<div class="art-page collection-page">
+  <div class="collection-header">
+    <h1>Art</h1>
+    <h2>creative works &amp; visual experiments</h2>
+    {% if art.updated %}
+      <p class="collection-updated">Updated {{ art.updated | date: '%b %d, %Y' }}</p>
+    {% endif %}
+    {% if art.intro_label or art.intro %}
+      <p class="collection-intro">
+        {% if art.intro_label %}
+          <span class="collection-intro-label">{{ art.intro_label }}</span>
+        {% endif %}
+        {% if art.intro %}
+          <span class="collection-intro-text">{{ art.intro }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
+
+  {% for section in art.sections %}
+    <section class="collection-section art-section" id="{{ section.id }}">
+      <div class="collection-section-heading">
+        <h3>{{ section.title }}</h3>
+        {% if section.subtitle %}
+          <span class="collection-section-subtitle">{{ section.subtitle }}</span>
+        {% endif %}
+      </div>
+
+      {% if section.items.size > 0 %}
+        <ul class="interviews-list">
+          {% for item in section.items %}
+            <li class="interview-card{% if item.image %} interview-card--with-thumb{% endif %}">
+              {% if item.image %}
+                <a class="interview-thumb" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                  <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy" />
+                </a>
+              {% endif %}
+              <div class="interview-card-body">
+                <div class="interview-card-meta">
+                  {% if item.type %}
+                    <span class="interview-type interview-type--{{ item.type }}">{{ item.type }}</span>
+                  {% endif %}
+                  {% if item.date %}
+                    <span class="interview-date">{{ item.date | date: '%b %d, %Y' }}</span>
+                  {% endif %}
+                  {% if item.source %}
+                    <span class="interview-source">{{ item.source }}</span>
+                  {% endif %}
+                </div>
+                <h4 class="interview-title">
+                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                </h4>
+                {% if item.title_original %}
+                  <p class="interview-title-original">{{ item.title_original }}</p>
+                {% endif %}
+                {% if item.description %}
+                  <p class="interview-desc">{{ item.description }}</p>
+                {% endif %}
+                {% if item.note %}
+                  <p class="interview-note">{{ item.note }}</p>
+                {% endif %}
+                {% if item.url %}
+                  <a class="interview-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                    View work <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="art-placeholder">Works coming soon!</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

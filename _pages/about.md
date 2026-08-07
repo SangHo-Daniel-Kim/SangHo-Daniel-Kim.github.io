@@ -41,6 +41,6 @@ In particular, I use modern 3D/4D approaches to model and analyze interactions t
 I am currently a senior undergraduate in Computer Science, Artificial Intelligence, and International Relations at [Sungkyunkwan University](https://www.skku.edu/eng/).
 I am thankful to have worked with Professors [Sangmin Lee](https://sites.google.com/view/sangmin-lee/home), [Jaepil Heo](https://sites.google.com/site/jaepilheo), and [Hyojin Sung](https://codelab.snu.ac.kr/people).
 
-Outside research, I enjoy film-making, listening to the radio, and excavating fancy new coffee shops. I also try to do volunteering and public service as much as possible, including governmental roles in policymaking and 300+ hours of volunteering!
+Outside research, I enjoy [film-making](https://youtu.be/YnsKKiO44rY?si=Ly2PCL523DVuw9U0), listening to the radio, and excavating fancy new coffee shops. I also try to do volunteering and public service as much as possible, including governmental roles in policymaking and 300+ hours of volunteering!
 
 You can find some of my interviews sharing personal thoughts [here](/interviews/) *(in Korean)*.
