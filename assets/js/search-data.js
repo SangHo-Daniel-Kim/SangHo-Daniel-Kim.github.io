@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/about/";
           },
+        },{id: "nav-art",
+          title: "art",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/art/";
+          },
         },{id: "nav-publications",
           title: "publications",
           description: "",
