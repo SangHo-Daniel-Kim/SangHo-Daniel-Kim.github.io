@@ -1,12 +1,68 @@
-updated: 2026-08-07
+updated: 2026-08-09
 
 intro_label: About
-intro: A look at my path through research, service, and everything in between.
+intro: My journey to where I am now.
 
 sections:
-  - id: journey
-    title: Journey
-    subtitle: words & moments
+  - id: life
+    title: Life
+    subtitle: trying things, finding questions
 
-# Alternating prose + photo rows. Set image_side to left or right per row.
+life_intro:
+  - "<strong>TL;DR: Why I want to pursue a PhD.</strong> Unlike many CS students, I spent much of my sophomore year exploring technology policymaking and diplomacy. I believed that by strengthening the institutions surrounding new technology &mdash; policy, governance, and international cooperation &mdash; I could help shape how AI would affect society."
+  - "But over time, I became increasingly aware of the distance between discussing a technology and actually understanding how it works. For a field as fast-paced, resource-intensive, and experimental as AI, I felt that working only at the level of policy and abstraction left an important part of the picture missing."
+  - "That realization brought me back to research. I wanted to understand the nature of these intelligent systems from the inside and eventually contribute directly to the technologies that future discussions would be built around. I came to believe that <strong>creating and understanding the technology itself was a more fundamental way for me to contribute to meaningful social change.</strong> This realization ultimately led me to where I am now."
+
+life_chapters:
+  - id: exploring
+    era: "~High School (~2020)"
+    title: Exploring Before Knowing
+    paragraphs:
+      - "Until high school, I was probably more interested in art than in technology. For a while, I seriously considered going to film school. Ever since middle school, I had worked in school broadcasting clubs, where I loved handling cameras, shooting and editing videos, and &mdash; best of all &mdash; showing something I had made to other people."
+      - "One of my biggest projects was a [short film](https://www.youtube.com/watch?v=YnsKKiO44rY&t=3s) (2018) for the school arts festival, loosely inspired by the movie *Her* (falling in love with an AI &mdash; in hindsight, quite a coincidence!). With no professional experience whatsoever, I had a blast hacking together filmmaking techniques from scratch, including (1) faking smooth dolly shots by <span class='reveal'><input type='checkbox' id='rv-dolly' class='reveal-toggle'><label for='rv-dolly' class='reveal-box'><span class='reveal-cue'>answer</span><span class='reveal-text'>resting the camera on a sheet of paper and dragging it</span></label></span>, and (2), since CG was out of the question, <span class='reveal'><input type='checkbox' id='rv-rain' class='reveal-toggle'><label for='rv-rain' class='reveal-box'><span class='reveal-cue'>answer</span><span class='reveal-text'>scrambling to gather everyone and shoot our rain scenes whenever it actually started raining</span></label></span>. Armed with nothing but an old school camera, a 2G cellphone for a microphone, and a bunch of boys trying to talk to a student ID card (yes, that is the plot), we somehow pulled it off."
+      - "That was the first time I felt what it meant to pour an enormous amount of time and effort into a single project. For me, it was also the moment when I first felt that quiet *[we've made something wonderful](https://www.youtube.com/watch?v=pIwlbAaZ3cs)* feeling."
+      - "I also loved to write and regularly participated in essay competitions. My last essay was published in my school's long-running literary journal for future students to read. Titled &ldquo;What Art Means to a STEM Student,&rdquo; it was about the odd experience of being a STEM student devoted to the arts. I was inspired by Steve Jobs' 2005 Stanford commencement speech, especially his idea of &ldquo;connecting the dots.&rdquo; You can [read it here](#) (I've included an AI-translated version, and I hope my rough thoughts still come through)."
+      - "Until then, I did not have a particular career in mind. Rather, I took a quiet pride in chasing things that seemed unrelated &mdash; film, art, music, writing, and whatever else caught my eye. School kept pushing me toward exams and admissions, but I felt there were things I could only explore while I was still a student. That conviction was what kept me going, even when people around me encouraged me to focus elsewhere."
+      - "Even my decision to choose CSE (with a focus on AI) as my major was almost accidental. With the shock of AlphaGo's match against Lee Sedol in 2016 still lingering in Korea, AI gave me this fuzzy feeling of science fiction becoming real &mdash; a technology inspired by human intelligence that could somehow connect to numerous different fields. I recall simply hoping that I would eventually find which dot to connect with AI. That hope was enough to send me down the rabbit hole, even though I still had little idea what I would do once I got there."
+
+  - id: college-air-force
+    era: College & Air Force
+    title: Finding What AI Could Be Used For
+    paragraphs:
+      - My first year of college did not immediately give me an answer. I was still quite uncertain when I enlisted in the Republic of Korea Air Force.
+      - "Military life initially felt like a world disconnected from everything I had known. Yet that isolation also gave me something unexpected: time to think without constantly comparing myself with professors, friends, or people following seemingly clearer paths."
+      - I was eventually assigned to the Air Force Operations Command, where I worked around the ROK–U.S. combined communications environment. One of the most formative experiences there started with a question about how Air Tasking Orders were produced. A junior colleague and I began reading whatever we could find—technical reports, military publications, defense research documents, and old materials describing the planning system. We also spoke with U.S. personnel working on operational planning and compared how different systems were organized.
+      - "What looked like a small inefficiency gradually revealed a much larger systems problem: fragmented processes, limited interoperability, and many manually coordinated steps. We spent nights discussing possible solutions, sometimes continuing our conversations quietly in the washroom after everyone else had gone to sleep."
+      - For an Air Force hackathon, we eventually proposed an AI-assisted operational planning system using machine learning across several stages of the planning process. The project received the ROK Air Force Chief of Staff's top award.
+      - "The award was meaningful, but the more important realization was much simpler: **AI could be used to solve problems that actually existed around me.**"
+      - After that, I joined several AI and data competitions dealing with problems in defense, healthcare, diplomacy, and other public domains. I especially enjoyed finding a problem with people from very different backgrounds, turning an idea into something concrete, and then having to prove that it could actually work.
+      - AI was no longer just the futuristic technology that had fascinated me as a student. It had become a tool for changing how things were done.
+
+  - id: policy-research
+    era: Post-Service
+    title: From Policy Back to Research
+    paragraphs:
+      - "After completing my military service and returning to university, however, I became interested in a different question: even if we build useful technology, **how does it actually become part of society?**"
+      - That question pulled me toward technology policy and diplomacy. Alongside computer science, I studied political science and became involved in government advisory programs, public diplomacy, and international discussions on emerging technologies. I had opportunities to participate in AI policy discussions and work with people from government, academia, and different countries.
+      - For a while, I seriously wondered whether policy rather than research might be where I could contribute most.
+      - Those experiences taught me to see technology beyond technical performance. New technologies operate inside institutions, regulations, markets, international relationships, and the decisions of people who eventually determine how they are used. But seeing policymaking more closely also made me recognize a limitation in the kind of contribution I personally wanted to make.
+      - Much of the work naturally began with studying what already existed, discussing possible futures, and proposing what *could* or *should* be done. I increasingly found myself wanting to move one step earlier—to create, test, and understand the technologies that those discussions would eventually be about.
+      - I realized that I did not only want to discuss technological change. **I wanted to produce some of it myself.**
+      - "When I returned seriously to AI research, I also knew that I wanted to work on something slightly unusual. Rather than only reproducing the abilities we explicitly associate with intelligence—recognition, reasoning, or problem solving—I became interested in the abilities humans rarely even think about as intelligence: the *soft skills* we use naturally when interacting with one another."
+      - We know where someone is looking, whom they are talking to, what a gesture refers to, how people position themselves around one another, and what subtle combinations of language and behavior might imply about their intentions.
+      - "Thanks to Professor Sangmin Lee, who was my advisor at the time, I was introduced to **Artificial Social Intelligence** and began researching multimodal social interaction understanding. It gave a name to something I had been searching for: building machines that do not merely perceive people, but understand how people communicate, behave, and interact with one another."
+      - For the first time, I felt that the different interests I had accumulated were beginning to converge.
+
+  - id: ut-austin
+    era: "2025–2026"
+    title: Toward Social and Physical Intelligence at UT Austin
+    paragraphs:
+      - Coming to UT Austin gave me the opportunity to push this question further.
+      - Working with Professors Kristen Grauman and Georgios Pavlakos, I began studying social interaction from a more spatial and physical perspective. My work gradually moved toward multimodal interaction modeling, 3D/4D human reconstruction, human motion, and how people interact not only with one another but also with the environments around them.
+      - This made me realize that social intelligence is deeply connected to physical intelligence. Understanding an interaction requires more than language. A machine may need to understand where people are, how their bodies are oriented, whom they are facing, what they are pointing toward, how they move over time, and how all of this relates to the surrounding 3D world.
+      - Looking back, this direction does not feel entirely accidental. My early fascination with cameras and visual storytelling, my experience using AI to address real operational problems in the Air Force, and my interest in how technology fits into human society all seem to have converged here.
+      - I am still exploring, and I expect my questions to keep changing. But I now have a much clearer direction than when I started:
+    closing_quote: How can we build intelligent machines that understand people, their interactions, and the physical world well enough to meaningfully participate in it?
+
+# Alternating prose + photo rows (optional). Set image_side to left or right per row.
 story_rows: []

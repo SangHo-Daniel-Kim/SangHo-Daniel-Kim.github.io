@@ -809,6 +809,192 @@ ul.task-list input[type="checkbox"] {
 // About page — prose + photo story stream
 // ---------------------------------------------------------------------------
 .about-page {
+  .about-life-lead {
+    margin: 0 0 2rem;
+    padding: 1.15rem 1.25rem;
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(
+      90deg,
+      rgba(191, 87, 0, 0.06) 0%,
+      transparent 100%
+    );
+
+    p {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--global-text-color);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .about-life-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.55rem;
+      bottom: 0.5rem;
+      left: 0.72rem;
+      width: 2px;
+      background-color: var(--global-divider-color);
+      z-index: 0;
+    }
+  }
+
+  .about-life-chapter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    gap: 0 1.15rem;
+    padding-bottom: 2.25rem;
+    z-index: 1;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .about-life-chapter-marker {
+    justify-self: center;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-top: 0.45rem;
+    border-radius: 50%;
+    background-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px var(--global-bg-color), 0 0 0 5px rgba(191, 87, 0, 0.15);
+  }
+
+  .about-life-chapter-content {
+    min-width: 0;
+    padding: 0.85rem 1rem 1.1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background-color: var(--global-card-bg-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba(191, 87, 0, 0.25);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    }
+  }
+
+  .about-life-era {
+    margin: 0 0 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+
+  .about-life-chapter-title {
+    margin: 0 0 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--global-text-color);
+  }
+
+  .about-life-prose {
+    font-size: 0.93rem;
+    line-height: 1.78;
+    color: var(--global-text-color);
+
+    p {
+      margin: 0 0 0.85rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+
+    em {
+      font-style: italic;
+      color: var(--global-text-color);
+    }
+
+    a {
+      color: var(--global-theme-color);
+    }
+
+    // Inline click-to-reveal ("answer") spoiler
+    .reveal-toggle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .reveal-box {
+      cursor: pointer;
+    }
+
+    .reveal-cue {
+      color: var(--global-theme-color);
+      user-select: none;
+    }
+
+    .reveal-box:hover .reveal-cue {
+      text-decoration: underline;
+    }
+
+    .reveal-text {
+      display: none;
+    }
+
+    .reveal-toggle:checked ~ .reveal-box .reveal-cue {
+      display: none;
+    }
+
+    .reveal-toggle:checked ~ .reveal-box .reveal-text {
+      display: inline;
+      padding: 0 0.25em;
+      border-radius: 3px;
+      background: rgba(191, 87, 0, 0.12);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+  }
+
+  .about-life-closing-quote {
+    margin: 1.1rem 0 0;
+    padding: 0.85rem 1rem;
+    border: none;
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(
+      90deg,
+      rgba(191, 87, 0, 0.07) 0%,
+      transparent 100%
+    );
+
+    p {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--global-text-color);
+    }
+  }
+
   .about-story-stream {
     display: flex;
     flex-direction: column;

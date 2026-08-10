@@ -3,7 +3,7 @@
 <div class="about-page collection-page">
   <div class="collection-header">
     <h1>About</h1>
-    <h2>inside the academy, and beyond it</h2>
+    <h2>academic, extracurricular, social impact &mdash; and beyond</h2>
     {% if about_page.updated %}
       <p class="collection-updated">Updated {{ about_page.updated | date: '%b %d, %Y' }}</p>
     {% endif %}
@@ -28,8 +28,42 @@
         {% endif %}
       </div>
 
-      <div class="about-story-stream">
-        {% if about_page.story_rows.size > 0 %}
+      {% if about_page.life_intro.size > 0 %}
+        <div class="about-life-lead">
+          {% for paragraph in about_page.life_intro %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if about_page.life_chapters.size > 0 %}
+        <div class="about-life-timeline">
+          {% for chapter in about_page.life_chapters %}
+            <article class="about-life-chapter" id="{{ chapter.id }}">
+              <div class="about-life-chapter-marker" aria-hidden="true"></div>
+              <div class="about-life-chapter-content">
+                {% if chapter.era %}
+                  <p class="about-life-era">{{ chapter.era }}</p>
+                {% endif %}
+                <h4 class="about-life-chapter-title">{{ chapter.title }}</h4>
+                <div class="about-life-prose">
+                  {% for paragraph in chapter.paragraphs %}
+                    {{ paragraph | markdownify }}
+                  {% endfor %}
+                </div>
+                {% if chapter.closing_quote %}
+                  <blockquote class="about-life-closing-quote">
+                    <p>{{ chapter.closing_quote }}</p>
+                  </blockquote>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if about_page.story_rows.size > 0 %}
+        <div class="about-story-stream">
           {% for row in about_page.story_rows %}
             {% assign image_side = row.image_side | default: 'left' %}
             <article class="about-story-row about-story-row--image-{{ image_side }}">
@@ -50,10 +84,8 @@
               {% endif %}
             </article>
           {% endfor %}
-        {% else %}
-          <p class="about-story-placeholder">My Long Story Coming Soon!</p>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     </section>
   {% endfor %}
 </div>
