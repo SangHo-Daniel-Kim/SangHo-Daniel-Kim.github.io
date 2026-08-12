@@ -35,6 +35,8 @@ I am a visiting student at [the University of Texas at Austin](https://www.cs.ut
 
 My research question is: **How can social intelligence understand beyond the projected world and interact with individuals/environment in physical space, as humans do?**
 
+<p class="research-question-casual"><span class="rq-casual-label">In simpler words:</span> How can intelligent machines read the room both verbal and nonverbally like social animals?</p>
+
 Thus, my research interests lie in (1) Computer Vision and (2) Multimodal Learning, with a focus on modeling everyday human activities.
 In particular, I use modern 3D/4D approaches to model and analyze interactions to better understand human behaviors.
 

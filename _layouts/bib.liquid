@@ -1,5 +1,20 @@
 ---
 ---
+{% assign pub_project_url = null %}
+{% if entry.project %}
+  {% if entry.project contains '://' %}
+    {% assign pub_project_url = entry.project %}
+  {% else %}
+    {% assign pub_project_url = entry.project | relative_url %}
+  {% endif %}
+{% elsif entry.website %}
+  {% assign pub_project_url = entry.website %}
+{% endif %}
+{% assign pub_project_external = false %}
+{% if pub_project_url and pub_project_url contains '://' %}
+  {% assign pub_project_external = true %}
+{% endif %}
+
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-5 abbr">
@@ -27,25 +42,66 @@
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+          {% if pub_project_url %}
+            <div class="preview-wrapper">
+              <a
+                href="{{ pub_project_url }}"
+                {% if pub_project_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+                class="preview-link-overlay"
+                aria-label="View project page for {{ entry.title | escape }}"
+              ></a>
+              <img class="preview" src="{{ entry.preview }}" alt="{{ entry.title | escape }}">
+            </div>
+          {% else %}
+            <img class="preview z-depth-1 rounded" src="{{ entry.preview }}" alt="{{ entry.title | escape }}">
+          {% endif %}
         {% elsif entry.preview contains '.pdf' %}
           {% assign entry_path = entry.preview | prepend: '/assets/pdf/' %}
           <div class="preview-wrapper">
-            {% if entry.website %}<a href="{{ entry.website }}" target="_blank" class="preview-link-overlay"></a>{% elsif entry.html %}<a href="{{ entry.html }}" target="_blank" class="preview-link-overlay"></a>{% endif %}
+            {% if pub_project_url %}
+              <a
+                href="{{ pub_project_url }}"
+                {% if pub_project_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+                class="preview-link-overlay"
+                aria-label="View project page for {{ entry.title | escape }}"
+              ></a>
+            {% elsif entry.html %}
+              <a href="{{ entry.html }}" target="_blank" rel="noopener noreferrer" class="preview-link-overlay"></a>
+            {% endif %}
             <iframe class="preview" src="{{ entry_path | relative_url }}#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" scrolling="no"></iframe>
           </div>
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.preview
-          %}
+          {% if pub_project_url %}
+            <div class="preview-wrapper">
+              <a
+                href="{{ pub_project_url }}"
+                {% if pub_project_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+                class="preview-link-overlay"
+                aria-label="View project page for {{ entry.title | escape }}"
+              ></a>
+              {%
+                include figure.liquid
+                loading="eager"
+                path=entry_path
+                sizes = "200px"
+                class="preview"
+                avoid_scaling=true
+                alt=entry.preview
+              %}
+            </div>
+          {% else %}
+            {%
+              include figure.liquid
+              loading="eager"
+              path=entry_path
+              sizes = "200px"
+              class="preview z-depth-1 rounded"
+              zoomable=true
+              avoid_scaling=true
+              alt=entry.preview
+            %}
+          {% endif %}
         {% endif %}
       {% endif %}
     </div>
@@ -54,7 +110,19 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {% if pub_project_url %}
+        <a
+          href="{{ pub_project_url }}"
+          {% if pub_project_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+          class="pub-title-link"
+        >
+          {{- entry.title -}}
+        </a>
+      {% else %}
+        {{- entry.title -}}
+      {% endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
